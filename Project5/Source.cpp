@@ -23,8 +23,8 @@ compNum sub(compNum c1, compNum c2)
 compNum mul(compNum c1, compNum c2)
 {
 	compNum c3;
-	c3.rPart = (c1.rPart * c2.rPart);
-	c3.cPart = (c1.cPart * c2.cPart);
+	c3.rPart = (c1.rPart * c2.rPart)+(c1.cPart * c2.cPart);
+	c3.cPart = (c1.rPart * c2.cPart)+(c1.cPart * c2.rPart);
 	return c3;
 }
 int main()
